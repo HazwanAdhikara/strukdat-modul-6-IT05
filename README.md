@@ -9,5 +9,5 @@
 
 ### How to run this program?
 - Path into your directory
-- In Terminal, type `g++ -std=c++11 -o run Bank-Management-System.cpp`
+- In Terminal, compile the code with `g++ -std=c++11 -o run Bank-Management-System.cpp`
 - then, `./run`
