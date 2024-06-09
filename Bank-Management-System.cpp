@@ -473,6 +473,7 @@ int main()
             {
                 system("clear");
                 displayHeader();
+                bms.displayEmployees();
                 cout << "Enter Employee ID: ";
                 int id;
                 cin >> id;
@@ -483,6 +484,7 @@ int main()
             {
                 system("clear");
                 displayHeader();
+                bms.displayAccounts();
                 cout << "Enter Account Number: ";
                 string accNum = readLine();
                 bms.deleteAccount(accNum);
