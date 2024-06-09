@@ -71,8 +71,8 @@ public:
     Employee(string n, int i) : name(n), id(i) {}
     virtual ~Employee() {}
     virtual void displayInfo() const = 0;
-    void setName(string n) { name = n; }
-    string getName() const { return name; }
+    void setName(string n) { name = n; }            //setter
+    string getName() const { return name; }         //getter
     void setId(int i) { id = i; }
     int getId() const { return id; }
 };
@@ -328,12 +328,10 @@ int main()
                 if (empType == 1)
                 {
                     bms.addEmployee(new BankTeller(name, id));
-                    system("clear");
                 }
                 else if (empType == 2)
                 {
                     bms.addEmployee(new Security(name, id));
-                    system("clear");
                 }
                 else
                 {
@@ -345,10 +343,11 @@ int main()
             {
                 system("clear");
                 displayHeader();
-                cout << "Enter Account Type (1. Savings, 2. Checking): ";
+                cout << "Enter Account Type (1. Savings, 2. Checking, 3. Back): ";
                 int accType;
                 cin >> accType;
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                if(accType == 3) continue;
                 cout << "Enter Account ID: ";
                 string accNum = readLine();
                 cout << "Enter Balance: ";
@@ -393,14 +392,12 @@ int main()
                 system("clear");
                 bms.displayEmployees();
                 waitForEnter();
-                system("clear");
             }
             else if (displayChoice == 2)
             {
                 system("clear");
                 bms.displayAccounts();
                 waitForEnter();
-                system("clear");
             }
             else if (displayChoice == 3)
             {
